@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ivette Felix Uy</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #fdf9f3;
+      font-family: 'Inter', sans-serif;
+      color: #222;
+      text-align: center;
+    }
+    
+    .container {
+      padding: 60px 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+    
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: 2.8rem;
+      line-height: 1.4;
+      margin-bottom: 40px;
+    }
+    
+    .details {
+      font-size: 1.1rem;
+      line-height: 2;
+      position: relative;
+    }
+    
+    .emoji {
+      font-size: 1.5rem;
+      vertical-align: middle;
+    }
+    
+    .note {
+      font-size: 0.7rem;
+      color: #d94f4f;
+      font-family: cursive;
+      display: inline-block;
+      transform: rotate(-2deg);
+      margin-left: 4px;
+    }
+    
+    .highlight {
+      font-weight: bold;
+      text-decoration: underline;
+      position: relative;
+    }
+    
+    .highlight + .note {
+      display: block;
+      margin-top: -10px;
+      font-size: 0.7rem;
+      color: #d94f4f;
+      font-family: cursive;
+    }
+    
+    .contact {
+      margin-top: 30px;
+      font-size: 1rem;
+    }
+    
+    .contact a {
+      color: #2d3a73;
+      text-decoration: underline;
+    }
+
+   
+    .btn-custom {
+      background-color: #fff9c4;
+      color: #000;
+      border: none;
+      margin: 5px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .text-content {
+      flex: 1 1 400px;
+      padding: 20px;
+    }
+
+    .text-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .text-content p {
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      color: #555;
+    }
+    .image-content {
+      flex: 1 1 400px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .image-content img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: 2.8rem;
+      line-height: 1.4;
+      margin-bottom: 40px;
+    }
+
+    .container.left {
+      position: relative;
+      margin-bottom: 50px;
+    }
+
+    .container.right {
+      position: relative;
+      transform: translateX(10%);
+      margin-bottom: 50px;
+    }
+
+    .date {
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    .dot {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #fff9c4;
+      border-radius: 50%;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 0 10px;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    ul li {
+      list-style: none;
+      text-align: left;
+    }
+ 
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: 2.8rem;
+      line-height: 1.4;
+      margin-bottom: 40px;
+    }
+
+    .skills-container {
+    display: flex; 
+    gap: 20px; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.skills1, .skills2, .skills3 {
+    width: 300px;
+    background-color: #fff9c4;
+    text-align: center;
+    padding: 20px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.contact-container {
+      width: 90%;
+      max-width: 500px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 30px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      background-color: #000;
+      border: 2px solid #fdf9f3; 
+      border-radius: 8px;
+      padding: 12px 15px;
+      color: white;
+      font-size: 1rem;
+      outline: none;
+      resize: none;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #ccc;
+    }
+    input:focus, textarea:focus {
+      border-color: #fff9c4; 
+    }
+    button {
+      margin-top: 20px;
+      background-color: #fdf9f3;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+
+    }
+    button:hover {
+      background-color: #fff9c4;
+    }
+  
+
+  </style>
+</head>
+
+<body>
+  <div class="btn-group my-4" role="group" aria-label="Navigation">
+    <button type="button" class="btn btn-custom">Home</button>
+    <button type="button" class="btn btn-custom">About Me</button>
+    <button type="button" class="btn btn-custom">Education</button>
+    <button type="button" class="btn btn-custom">Skills</button>
+    <button type="button" class="btn btn-custom">Contact</button>
+  </div>
+
+  <div class="container">
+    <h1>Hi, Welcome!<br>It's me Elli<br></h1>
+
+    <p class="details">
+      she loves mangoes <span class="emoji">🥭</span>, 
+      dogs <span class="emoji">🐶</span>,
+      beaches <span class="emoji">👙</span>,
+      coffee <span class="emoji">☕</span>,
+      makeup <span class="emoji">💄</span>,
+      and the small things that <span class="highlight">she values!</span>
+      <span class="note">YOLO: You Only Live Once!</span>
+    </p>
+
+    <p class="Contact">
+      scroll down to know more about her <span class="emoji">💋  
+    </p>
+  </div>
+  <div class="container">
+    <div class="text-content">
+      <h1>About Her</h1>
+      <p>Hi! I am Louise Ann L. Elli, a second-year BSIT student under the program of Bachelor of Science in Information Technology at NU Lipa. This course was really not on my bucket list but hey! I am starting to love it now. I am passionate in creating a project that is user-friendly and visually appealing. </p>
+      <p>Additionally, I am a perfectionist, I love organizing things. And one thing I truly believe in life is that we should never stop creating and learning. Lastly, I love to sit and create with some coffee & conversations. </p>
+     
+      <button type="button" class="btn" style="background-color: #fff9c4; color: #FFDC2E; border: 1px solid #FFE761">
+        <i class="fab fa-instagram"></i>
+      </button>
+      
+      <button type="button" class="btn" style="background-color: #fff9c4; color: #FFDC2E; border: 1px solid #FFE761">
+        <i class="fab fa-facebook-f"></i>
+      </button>
+
+      <button type="button" class="btn" style="background-color: #fff9c4; color: #FFDC2E; border: 1px solid #FFE761">
+        <i class="fas fa-envelope"></i>
+      </button>
+      
+    </div>
+
+    <div class="image-content">
+      <img src="494356257_959849846323944_9151132427591143542_n.jpg" alt="Dovile">
+    </div>
+  </div>
+
+  <h2>Education</h2>
+  <div class="timeline">
+    <div class="dot"></div>
+  
+    <div class="container left">
+      <div class="date">2023 - 2025</div>
+      <h3>College</h3>
+      <ul>
+        <li>National University Lipa</li>
+        <li>Bachelor of Science in Information Technology</li>
+        <li> Dean's Lister A.Y. 2023-2024</li>
+        <li>DICT Participant Year 2023-2024</li>
+      </ul>
+    </div>
+  
+    <div class="dot"></div>
+    <div class="container right">
+      <div class="date">2022 - 2023</div>
+      <h3>Senior High School</h3>
+      <ul>
+        <li>San Isidro Integrated National High School</li>
+        <li>Humanities and Social Sciences</li>
+        <li>With Honors</li>
+      </ul>
+    </div>
+  
+    <div class="dot"></div>
+    <div class="container left">
+      <div class="date">2017 - 2021</div>
+      <h3>Junior High School</h3>
+      <ul>
+        <li>San Isidro Integrated National High School</li>
+        <li>Humanities and Social Sciences</li>
+        <li>With Honors</li>
+      </ul>
+    </div>
+
+    <h3>Skills</h3>
+    <div style="display: flex; background-color: #fff9c4; padding: 10px; gap: 20px;">
+        <div style="flex: 1; text-align: center;">
+            <i class="fas fa-paint-brush" style="font-size: 20px; margin-bottom: 10px;"></i>
+            <h3>Graphic Design</h3>
+            <p>For me, Graphic Designing combines creativity, strategy, and aesthetics to make websites visually appealing, memorable, and fun. It is not really my expertise, but I am willing to learn for more improvements in future projects.</p>
+        </div>
+    
+        <div style="flex: 1; text-align: center;">
+            <i class="fas fa-users" style="font-size: 20px; margin-bottom: 10px;"></i>
+            <h3>Leadership Skills</h3>
+            <p>As a former leader for four years, I have learned that Leadership is the ability to inspire, guide, and empower others toward a common goal. I truly believe that a good leader doesn't tell you what to do, unless they show you how it is done.</p>
+        </div>
+    
+        <div style="flex: 1; text-align: center;">
+            <i class="fas fa-comment-dots" style="font-size: 20px; margin-bottom: 5px;"></i>
+            <h3>Communication Skills</h3>
+            <p>Communication skills are the tools for sharing ideas clearly and effectively. Whether through speaking, writing, or visuals, strong communication builds understanding, collaboration, and impact. As for me, I like to communicate my thoughts and ideas through writing.</p>
+        </div>
+    
+        
+  <div class="contact-container">
+    <h1>Contact Me</h1>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Phone Number" required>
+      <input type="text" placeholder="Subject" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+          
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>    
+</body>
+</html>
